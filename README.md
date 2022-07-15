@@ -1,4 +1,4 @@
-# Google-Anthos-setup-configuration-
+# Google-Anthos-setup-configuration
 
 # Anthos In-cluster Internal HTTPS ASM Gateway Setup
 
