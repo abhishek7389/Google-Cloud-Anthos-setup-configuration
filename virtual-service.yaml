@@ -1,27 +1,18 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: bookinfo
-  namespace: ns3
+  name: ns3-virtual-service
 spec:
   hosts:
-  - "*"
+  - "<your dns name>"
   gateways:
-  - bookinfo-gateway
+  - asm-gateway
   http:
-  - match:
-    - uri:
-        exact: /productpage
-    - uri:
-        prefix: /static
-    - uri:
-        exact: /login
-    - uri:
-        exact: /logout
-    - uri:
-        prefix: /api/v1/products
-    route:
+ # - match:
+ #   - uri:
+ #       prefix: /test
+  - route: 
     - destination:
-        host: productpage
+        host: store-v4
         port:
-          number: 9080
+          number: 8080
