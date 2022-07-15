@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: bookinfo-gateway
+  name: asm-gateway
 spec:
   selector:
     istio: ingressgateway # use istio default controller
@@ -11,7 +11,7 @@ spec:
       name: https
       protocol: HTTPS
     hosts:
-    - "asm.searceinc.org"
+    - "<your hostname>"
     tls:
       mode: SIMPLE
-      credentialName: asm-gateway-credential
+      credentialName: <your created tls secret name>
