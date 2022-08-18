@@ -40,7 +40,8 @@ gcloud services enable \
     anthos.googleapis.com \
     gkeconnect.googleapis.com \
     gkehub.googleapis.com \
-    cloudresourcemanager.googleapis.com
+    cloudresourcemanager.googleapis.com \
+    mesh.googleapis.com
 ```
 
 Reference Link - https://cloud.google.com/service-mesh/v1.4/docs/gke-install-new-cluster
