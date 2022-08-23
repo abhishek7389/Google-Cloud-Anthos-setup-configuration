@@ -144,10 +144,9 @@ kubectl label namespace istio-gateway istio-injection- istio.io/rev=$REVISION --
 
 2.2 Create a TLS secret in the kubernetes 
 ```
-kubectl create -n istio-system secret tls asm-gateway-credential --key=asm.key --cert=asm.crt
+kubectl create -n istio-gateway secret tls asm-gateway-credential --key=asm.key --cert=asm.crt
 ```
 
-kubectl create -n istio-gateway secret tls asm-gateway-credential --key=asm.key --cert=asm.crt
 
 2. Deploy the files one by one 
 
