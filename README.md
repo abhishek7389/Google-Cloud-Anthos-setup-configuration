@@ -183,6 +183,16 @@ please apply the below yaml, in application namespace
 
 - virtual-servie.yaml
 
+### Note: If your Gateway is in different namespace & you want to map your application's virtual service from different namespace be sure you reference your gateway like mention below - 
+```
+gateways:
+  - <Your Gateway's Namespace>/<Your Gateway Name>
+```
+example: in our case gateway is deployed in application namespace(ie ns3) so if there are requirement thatb you need to reference this gateway from the different namespace virtual service file so in the virtual file you will reference the gateway section mentioned above like -
+```
+gateway:
+ - ns3/asm-gateway
+```
 
 ## Testing the application
 
