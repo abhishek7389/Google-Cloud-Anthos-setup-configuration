@@ -6,13 +6,13 @@ spec:
   hosts:
   - "<your dns name>"
   gateways:
-  - asm-gateway
+  - ns3/asm-gateway
   http:
  # - match:
  #   - uri:
  #       prefix: /test
   - route: 
     - destination:
-        host: store-v4
+        host: store-v3
         port:
           number: 8080
