@@ -122,10 +122,10 @@ jsonpath={.items[*].metadata.labels.'istio\.io\/rev'}'{"\n"}')
 ```
 7.2 Lebal the namespaces
 ```
-kubectl label namespace <namespace name> istio-injection- istio.io/rev=$REVISION --overwrite
+kubectl label namespace <namespace name> istio-injection=enabled istio.io/rev=$REVISION --overwrite
 ```
 
-example - kubectl label namespace istio-system istio-injection- istio.io/rev=$REVISION --overwrite
+example - kubectl label namespace istio-system istio-injection=enabled istio.io/rev=$REVISION --overwrite
 
 ## Deployment of ingress controller 
 
@@ -135,7 +135,7 @@ kubectl create ns istio-gateway
 ```
 label the namespace
 ```
-kubectl label namespace istio-gateway istio-injection- istio.io/rev=$REVISION --overwrite
+kubectl label namespace istio-gateway istio-injection=enabled istio.io/rev=$REVISION --overwrite
 ```
 
 1. Create a self managed certificate & kubernetes TLS secret
