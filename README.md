@@ -63,7 +63,7 @@ gcloud compute firewall-rules list --filter="name~gke-CLUSTER_NAME-[0-9a-z]*-mas
 ``` 
 1.2 Modify the firewall-rule with the required ports 
 ```
-gcloud compute firewall-rules update FIREWALL_RULE_NAME --allow tcp:10250,tcp:443,tcp:15017,tcp:15014,tcp:8080  --project <network project id>   
+gcloud compute firewall-rules update FIREWALL_RULE_NAME --allow tcp:10250,tcp:443,tcp:15017,tcp:15014,tcp:8080,tcp:15021 --project <network project id>   
 ```
 Note - Be sure your bastion is in cluster's control plane authorizied network
 
